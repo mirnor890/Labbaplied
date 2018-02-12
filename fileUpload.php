@@ -18,7 +18,7 @@
  * $_FILES['userfile']['name']
 The original name of the file on the client machine.
 
-$_FILES['userfile']['type']
+$_FILES['userfile']['type'] 
 The mime type of the file, if the browser provided this information. An example would be "image/gif". This mime type is however not checked on the PHP side and therefore don't take its value for granted.
 
 $_FILES['userfile']['size']
