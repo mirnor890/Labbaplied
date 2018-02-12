@@ -5,7 +5,6 @@ include 'config.php';
 
 
 	if (isset($_POST['submit'])) {
-		include 'config.php';
 		require_once('connect.php');
 
 

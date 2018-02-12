@@ -10,7 +10,7 @@
     ?>      
 
             
-<a class="btn btn-danger" href="../login.php">Log in here to upload your picture</a>
+<a class="btn btn-danger" href="login.php">Log in here to upload your picture</a>
  
 
 

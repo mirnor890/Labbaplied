@@ -46,6 +46,9 @@ if (isset($_POST) && !empty($_POST)) {
 //    exit();
 //  }
 
+$searchtitle = htmlentities($searchtitle);
+$searchauthor = htmlentities($searchauthor);
+
 $searchtitle = addslashes($searchtitle);
 $searchauthor = addslashes($searchauthor);
 
