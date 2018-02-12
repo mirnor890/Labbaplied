@@ -1,5 +1,7 @@
-<?php include 'config.php';?>
+<?php 
+include 'config.php';?>
 <?php include 'header.php';?>
+
 
 	<main>
 		<div class="content-box">

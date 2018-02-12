@@ -26,3 +26,7 @@
 			</ul>
 		</nav>
 	</header>
+
+<?php if (!isset($_SESSION['username'])): ?>
+	<h1>Du e inte inloggad mannen</h1><?php die(); //dödar sidan om man inte är inloggad?>  
+<?php endif ?>

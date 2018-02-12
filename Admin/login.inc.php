@@ -1,12 +1,11 @@
 <?php 
-session_start();
 
 include '../config.php';
 
 
 
 	if (isset($_POST['submit'])) {
-		include '../config.php';
+		
 		//require_once('connect.php');
 
 
@@ -14,6 +13,9 @@ include '../config.php';
 		//Sha1 hashar psw
 		$username = mysqli_real_escape_string($connection, $_POST['uname']); 
 		$password = mysqli_real_escape_string($connection, $_POST['psw']);
+		
+		$password = sha1($password);
+
 		// Felhanterare
 		//Kontroll om inputs är tomma
 		if (empty($username) || empty($password)) {
@@ -36,6 +38,7 @@ include '../config.php';
 
 							$_SESSION['username'] = $row['username'];
 							$_SESSION['password'] = $row['password'];
+							//var_dump($_SESSION);
 							header("Location: login.php");
 
 						}

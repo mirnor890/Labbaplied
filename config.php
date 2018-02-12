@@ -1,5 +1,5 @@
 <?php 
-error_reporting(0);
+session_start();
 
 $dbname = 'Book club';
 $dbuser = 'root';
@@ -16,9 +16,8 @@ $select_db = mysqli_select_db($connection, 'Book club');
 	}
 
 //$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+$gbb = explode('/', $_SERVER["REQUEST_URI"]);
+$current_page = end($gbb);
 
-$current_page = end(explode('/', $_SERVER["REQUEST_URI"]));
-
-//$current_page = end($strings); 
 
 ?>
