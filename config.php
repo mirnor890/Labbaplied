@@ -19,5 +19,16 @@ $select_db = mysqli_select_db($connection, 'Book club');
 $gbb = explode('/', $_SERVER["REQUEST_URI"]);
 $current_page = end($gbb);
 
+function security($data){ //skapar en funtion som innehåller alla security funktioner.  
+	$data = trim($data); //tar bort mellanslag
+	$data = addslashes($data); //tar bort specialtecken
+	global $connection; //global säger att detf inns kod skriven som man kan connecta till utan att behöva connecta till databaen en gång till
+
+	$data = mysqli_real_escape_string($connection, $data); //skyddar mot SQL injection
+	$data = htmlspecialchars($data);
+	$data = htmlentities($data); 
+	return $data;
+}
+
 
 ?>

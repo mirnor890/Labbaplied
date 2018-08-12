@@ -162,6 +162,11 @@ h3 {
   text-decoration: none;
 }
 
+label {
+	display: block;
+	margin: 5px 0;
+}
+
 
 
 #about-img {
@@ -201,6 +206,8 @@ footer {
 	background-color: #f9f5ef;
 	padding: 3%;
 }
+
+
 
 
 

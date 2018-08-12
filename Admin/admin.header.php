@@ -20,7 +20,7 @@
 				>Admin panel</a></li>
 				<li><a class="<?php echo ($current_page == 'upload.php') ? 'active' : NULL ?>"  href="upload.php">Upload</a></li>
 				<li><a class="<?php echo ($current_page == 'create.php') ? 'active' : NULL ?>"  href="create.php">Create</a></li>
-				<li><a class="<?php echo ($current_page == 'delete.php') ? 'active' : NULL ?>"   href="delete.php">Delete</a></li>
+				<li><a class="<?php echo ($current_page == 'deletebook.php') ? 'active' : NULL ?>"   href="deletebook.php">Delete</a></li>
 				<li><form  method="POST" action="logout.php"><button name="submit" type="submit">logout</button>
         		</form></li>
 			</ul>
