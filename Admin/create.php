@@ -35,15 +35,14 @@ if (isset($_POST['newbooktitle'])) {
     }
 
     // Talar om vilka saker som ska läggas in i databasen och vad som ska göras när man adderat allt. 
-    $stmt = $db->prepare("INSERT INTO Book(ISBN, Title, Author ) values (?, ?, ?)"); //vilka väern man vill adera och till vilka "tables" man vill addera dem
-    $stmt->bind_param('ssi', $newISBN, $newbooktitle, $newbookauthor);
+    $stmt = $db->prepare("INSERT INTO Book(ISBN, Title, Author) values (?, ?, ?)"); //vilka värden man vill adera och till vilka "tables" man vill addera dem
+    $stmt->bind_param('iss', $newISBN, $newbooktitle, $newbookauthor);
     $stmt->execute();
     printf("<br>Book Added!");
     printf("<br><a href=login.php>Return to admin-panel hiyaaaah!</a>");
     exit;
 }
 
-// Not a postback, so present the book entry form
 ?>
 
 
